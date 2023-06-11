@@ -15,9 +15,16 @@ vector<string> split(const string &);
 
 int diagonalDifference(vector<vector<int>> arr) {
     int result{}, d1 {}, d2 {};
-    
-    d1 = arr.at(0).at(0) + arr.at(2).at(2);      
-    d2 = arr.at(0).at(2) + arr.at(2).at(0);
+    for(int i = 0; i < arr.size(); i++){
+        for(int j = 0; j < arr.size(); j++){
+            if(i==j){
+                d1 = d1 + arr.at(i).at(j); 
+            }
+            if(i+j==(arr.size()-1)){
+                d2 = d2 + arr.at(i).at(j);
+            }
+        }
+    }
     result = d1 - d2;
     if(result >= 0){
         return result;
