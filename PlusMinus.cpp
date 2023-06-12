@@ -13,7 +13,7 @@ vector<string> split(const string &);
  */
 
 void plusMinus(vector<int> arr) {
-    float p {}, n {}, z {}, t;
+    float p {}, n {}, z {}, t {};
     t = arr.size();
     for(int i = 0; i < arr.size(); i++){
         if(arr.at(i)>0){
